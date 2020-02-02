@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Approximate Derivatives</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="utils.js"></script>
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+<p style="text-align:center">
+Derivative of \(x(t)\) at time \(a\) is defined as: \( \left. \frac{dx}{dt}\right|_{t=a} = \lim_{h \to 0} \frac{x(a) -x(a-h)}{h} \)
+</p>
+    <div style="width:75%">
+        <canvas id="canvas"></canvas>
+    </div>
+    <p>
+    Point at which to take the derivative:
+    <input id="positionSlider" type="range" min="100" max="1000" value="50" class="slider" >
+    </p>
+    <p>
+    Value of the lag we use to compute an approximate slope:
+    <input id="dtSlider" type="range" min="1" max="100" value="50" class="slider" >
+    </p>
+
+    <script src="derivplot.js"></script>
+</body>
+
+</html>
